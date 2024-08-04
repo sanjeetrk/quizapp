@@ -10,7 +10,7 @@ let time_element = document.getElementById("timer");
 let current_question_number = 0;
 let score = 0;
 let time;
-const total_time = 30;
+const total_time = 15;
 let sec = total_time;
 
 function timer() {
