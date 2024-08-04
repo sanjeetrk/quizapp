@@ -3,10 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     display: flex;
     align-items: center;
-    justify-content: center;    
+    justify-content: center;
     background-image: linear-gradient(purple, rgb(238, 48, 238));
     min-height: 100vh;
     width: 100%;
@@ -24,18 +25,29 @@ body {
     overflow: hidden;
     padding: 10px;
 }
+
 .heading-txt {
     color: purple;
     font-size: larger;
     font-weight: bold;
     margin: 10px;
+    text-align: center;
 }
+
+.timer-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
 #timer {
     font-size: larger;
     font-weight: 600;
     padding: 4px;
     box-shadow: 0px 0px 2px 1px purple;
 }
+
 .question {
     margin: 8px;
     box-shadow: 0px 0px 2px 1px rgb(74, 70, 70);
@@ -46,27 +58,39 @@ body {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+
 .option-container {
     display: flex;
     flex-direction: column;
-    margin: 6px 4px;    
+    margin: 6px 4px;
     width: 100%;
     padding: 10px;
 }
+
 .option-container input {
-    visibility: hidden;    
+    visibility: hidden;
 }
-.option-container label {   
+
+.option-container label {
     box-shadow: 0px 0px 4px 1px rgb(128, 123, 123);
     padding: 5px;
     border-radius: 3px;
     transition: 0.5s;
 }
-.option-container input:checked + label {
+
+.option-container input:checked+label {
     background-color: rgb(159, 84, 159);
     color: white;
     box-shadow: 3px 3px 4px 1px rgb(78, 69, 78);
 }
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
 #next-button {
     padding: 10px;
     border: none;
@@ -78,6 +102,19 @@ body {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     transition: 0.2s;
 }
+
 #next-button:active {
-    box-shadow: none;    
+    box-shadow: none;
+}
+
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
 }
